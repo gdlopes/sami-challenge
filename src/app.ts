@@ -11,14 +11,13 @@ import './container';
 
 const app = express();
 
-mongoose.connect(
-  'mongodb+srv://gustavo:admin@cluster0.4vyya.mongodb.net/sami-challenge',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-  }
-);
+mongoose.connect('mongodb://mongo/sami', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+})
+  .then(db => console.log('DATABASE CONNECTED'))
+  .catch(err => console.error(err));
 
 app.use(express.json());
 app.use(routes);
