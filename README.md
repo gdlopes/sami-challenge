@@ -57,7 +57,13 @@ $ git clone https://github.com/gdlopes/sami-challenge.git
 # Navegando para a pasta do projeto
 $ cd sami-challenge
 
-# Rodando o docker
+# Instalando as dependências
+$ yarn
+
+# Build do docker
+$ docker-compose build
+
+# Subindo o docker
 $ docker-compose up
 
 # Para rodar os testes basta
